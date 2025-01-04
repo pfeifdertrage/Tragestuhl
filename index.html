@@ -213,10 +213,10 @@
                 total += treppenanzahl * treppenPreis;
                 breakdown += `<p><b>Treppen (${treppenanzahl} x ${treppenPreis.toFixed(2)} €):</b> ${(treppenanzahl * treppenPreis).toFixed(2)} €</p>`;
 
-                breakdown += `<p><b>Gesamtpreis:</b> ${total.toFixed(2)} €</p>`;
+                breakdown += `<p><b>Unverbindlicher Gesamtpreis:</b> ${total.toFixed(2)} €</p>`;
 
                 let resultHTML = `
-                    <h3>Unverbindliches Angebot</h3>
+                    <h3>Unverbindliches Angebot Tragestuhl</h3>
                     <p><b>Patientenname:</b> ${patientenname}</p>
                     <p><b>Startadresse:</b> ${start}</p>
                     <p><b>Zieladresse:</b> ${ziel}</p>
@@ -238,8 +238,8 @@
         function printResult() {
             const printWindow = window.open('', '_blank');
             printWindow.document.write(`
-                <html><head><title>Unverbindliches Angebot</title></head><body>
-                <h1>Unverbindliches Angebot</h1>
+                <html><head><title>Unverbindliches Angebot Tragestuhl</title></head><body>
+                <h1>Unverbindliches Angebot Tragestuhl</h1>
                 ${document.getElementById('results').innerHTML}
                 </body></html>
             `);
